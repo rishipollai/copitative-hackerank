@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+#define fast ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define ll long long int
+#define endl "\n"
+using namespace std;
+int main(){
+    fast;ll n,k;cin>>n;string s;vector<string> v,vv;
+    for(int i=0;i<n;i++){
+        cin>>s;
+        sort(s.begin(),s.end());
+        vv.push_back(s);
+    }
+    cin>>k;
+    
+    for(int i=0;i<k;i++){
+        cin>>s;
+        sort(s.begin(),s.end());
+        v.push_back(s);
+    }
+    unordered_map<string,ll> mp;
+    for(auto x:vv){
+        mp[x]++;
+    }
+    for(auto x:v){
+        if(mp[x])
+        {
+            cout<<mp[x]<<endl;
+        }
+        else
+           cout<<0<<endl;
+    }
+    
+}
