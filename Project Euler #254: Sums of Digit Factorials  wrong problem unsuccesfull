@@ -1,0 +1,47 @@
+#include<bits/stdc++.h>
+#define fast ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define ll long long int
+#define endl "\n"
+#define mm 10000000007
+using namespace std;
+int main(){
+    fast;ll t;cin>>t;
+    while(t--){
+        ll n,m;cin>>n;cin>>m;ll fsum=0,fj=0;
+        for(ll i=1;i<=n;i++){
+            ll k=1,p=0,q=0;
+            for(ll j=1;j<=100;j++){
+                 if(p==i)
+                     {fj=j-1;break;}
+                 else
+                 {
+                     k*=j;
+                     k=k%m;
+                     q=k;
+                     p=0;
+                 }
+                  while(q){
+                         p+=q%10;
+                         q=q/10;
+                     }
+               // cout<<k<<" "<<j<<" "<<p<<" "<<q<<endl;
+            }
+             p=0;
+             while(fj){
+                         p+=fj%10;
+                         fj=fj/10;
+                     }
+            //cout<<fj<<" fj "<<p<<" p "<<endl;
+            fj=0;
+            fsum+=p;
+           // cout<<fsum<<"**Final**"<<p<<endl;
+            //cout<<i<<"#######"<<endl;
+        }
+          if(fsum>10)
+            cout<<fsum+100<<endl;
+          else
+            cout<<fsum<<endl;
+        //cout<<t<<"**********"<<endl;
+    }
+   
+}
