@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+#define fast ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define ll long long int
+#define endl "\n"
+using namespace std;
+int main(){
+    fast;string s;cin>>s;
+    ll n;cin>>n;ll c=0;
+    for(ll i=0;i<s.size();i++){
+        if(s[i]=='a')
+            c++;
+    }
+    ll sz=s.size();
+    ll k=n/sz;
+    ll p=n%sz;
+    ll sum=0;
+    sum=c*k;c=0;
+    for(ll i=0;i<p;i++){
+        if(s[i]=='a')
+          c++;
+    }
+    sum=c+sum;
+    cout<<sum<<endl;
+    
+}
