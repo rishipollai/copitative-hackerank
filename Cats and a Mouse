@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+#define fast ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define endl "\n"
+#define ll long long int
+#define mod 1e6+7
+using namespace std;
+int main()
+{
+    fast;
+    ll t;cin>>t;ll a,b,c;
+    while(t--)
+    {
+        cin>>a>>b>>c;
+        if(abs(c-a)>abs(c-b))
+        {
+            cout<<"Cat B"<<endl;
+        }
+        else if(abs(c-a)==abs(c-b))
+        {
+            cout<<"Mouse C"<<endl;
+        }
+        else
+        {
+           cout<<"Cat A"<<endl; 
+        }
+    }
+}
+
+
